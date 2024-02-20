@@ -7,10 +7,10 @@ require 'logger'
 require 'faker'
 
 # Load all of our ActiveRecord::Base objects.
-require_relative 'models/category.rb' # categories table
-require_relative 'models/customer.rb' # customers table
-require_relative 'models/product.rb'  # products table
-require_relative 'models/province.rb' # provinces table
+require_relative 'category.rb' # categories table
+require_relative 'customer.rb' # customers table
+require_relative 'product.rb'  # products table
+require_relative 'province.rb' # provinces table
 
 # Establish our connection to our serverless sqlite3 database.
 ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :database => 'db/development.sqlite3'
@@ -19,4 +19,4 @@ ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :database => 'db/
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 # Uncomment this line to make the logger output look nicer terminals that don't support colour coding.
-# ActiveSupport::LogSubscriber.colorize_logging = false
+#ActiveSupport::LogSubscriber.colorize_logging = false
